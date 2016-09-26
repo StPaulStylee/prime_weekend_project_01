@@ -1,0 +1,53 @@
+/* Base reset used: normalize.css */
+
+/*======================================================================
+*                       Base
+*======================================================================*/
+
+html {
+  font-size: 62.5%;
+  margin: 0 auto;
+  padding-left: 1.6em;
+  width: 80%;
+}
+
+body {
+  position: relative;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+
+
+
+
+/*======================================================================
+*                       FORM
+*======================================================================*/
+
+
+.employeeData {
+    min-height: 20em;
+}
+
+.input {
+  padding: 1.6em 0 0 0;
+}
+
+/*======================================================================
+*                       EMPLOYEE DATA
+*======================================================================*/
+
+.employeeDataList li {
+  display: inline-block;
+  padding-right: 2em;
+  text-decoration: underline;
+}
+
+li.employee {
+  display: block;
+  text-decoration: none;
+}

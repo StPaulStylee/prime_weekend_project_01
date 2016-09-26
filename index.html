@@ -3,37 +3,65 @@
   <head>
     <meta charset="utf-8">
     <title>Weekend Challenge #1</title>
+    <link rel='stylesheet' href='normalize.css' />
     <link rel='stylesheet' href='main.css' />
     <script src='jquery-3.1.1.min.js'></script>
     <script src='app.js'></script>
   </head>
   <body>
     <form id='employeeInfo'>
-      <label for='employeeFirstName'>First Name</label>
-      <input type='text' id='employeeFirstName' name='employeeFirstName'  />
+      <div class='input'>
+        <label for='employeeFirstName'>First Name</label>
+        <input type='text' id='employeeFirstName' name='employeeFirstName' autofocus="" />
 
-      <label for='employeeLastName'>Last Name</label>
-      <input type='text' id='employeeLastName' name='employeeLastName'  />
 
-      <label for='employeeID'>ID Number</label>
-      <input type='text' id='employeeID' name='employeeID'  />
+        <label for='employeeLastName'>Last Name</label>
+        <input type='text' id='employeeLastName' name='employeeLastName'  />
+      </div>
+      <div class='input'>
+        <label for='employeeID'>ID Number</label>
+        <input type='text' id='employeeID' name='employeeID'  />
 
-      <label for='employeeTitle'>Job Title</label>
-      <input type='text' id='employeeTitle' name='employeeTitle'  />
+        <label for='employeeTitle'>Job Title</label>
+        <input type='text' id='employeeTitle' name='employeeTitle'  />
+      </div>
+      <div class='input'>
+        <label for ='employeeSalary'>Annual Salary</label>
+        <input type='text' id='employeeSalary' name='employeeSalary'  />
 
-      <label for ='employeeSalary'>Annual Salary</label>
-      <input type='text' id='employeeSalary' name='employeeSalary'  />
-
-      <button type='submit'>Submit</button>
+        <button type='submit'>Submit</button>
+      </div>
     </form>
     <section class='employeeData'>
       <h1>Employee List</h1>
-      <h2>First Name</h2>
-      <h2>Last Name</h2>
-      <h2>ID</h2>
-      <h2>Title</h2>
-      <h2>Annualy Salary</h2>
-      <p>Monthly Salary Expenditures: </p>
+      <ul class='employeeDataList'>
+        <li id='first'>First Name
+          <ul id='a'>
+          </ul>
+        </li>
+        <li id='last'>Last Name
+          <ul id='b'>
+          </ul>
+        </li>
+        <li id='id'>ID
+          <ul id='c'>
+          </ul>
+        </li>
+        <li id='title'>Title
+          <ul id='d'>
+          </ul>
+        </li>
+        <li id='salary'>Salary ($)
+          <ul id='e'>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <button class='delete'>Delete Last</button>
+    <section>
+      <div>
+        <p id='monthlySalary'>Monthly Salary Expenditures ($): </p>
+      </div>
     </section>
   </body>
 </html>
