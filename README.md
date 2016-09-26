@@ -9,7 +9,7 @@ into the salary input are aggregated and divided by 12 to represent the labor co
 - The aggregated salary figure is rounded to the nearest whole integer. I made various
 attempts to correct this matter using methods such as parseFloat() and Math.round(value * 100/100) but I could not seem to get it working.
 - I can't get the appended list items which contain the input data to not be underlined. They are
-inheriting the styling from there parent <li> and even though I know this, I cannot get a grasp
+inheriting the styling from their parent <li> and even though I know this, I cannot get a grasp
 for why I can't get rid of them. Even the all powerful !important will not make it a styled appropriately.
 - The delete button isn't flexible in terms that it only deletes the last entry. It
 needs to have more functionality so that the user can delete whichever entry they choose.
