@@ -14,7 +14,7 @@ employee object. */
     });
     console.log('employee object', employee);
 // Clears inputs after submission
-    $('#employeeInfo').find('input[type=text]').val('');
+    $('#employeeInfo').find('input[type=text],[type=number]').val('');
 
     appendDom(employee);
     monthlySalary(employee);
