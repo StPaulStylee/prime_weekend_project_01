@@ -14,6 +14,8 @@ for why I can't get rid of them. Even the all powerful !important will not make 
 - If all of the inputs are not filled out with some sort of data, the styling of the list-items in
 the EmployeeDataList class get all out of whack. They need to be anchored into their position to
 assure proper visuals.
+- The delete button isn't flexible in terms that it only deletes the last entry. It
+needs to have more functionality so that the user can delete whichever entry they choose.
 
 ### To Do's:
 - Fix bugs.
