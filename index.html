@@ -5,63 +5,63 @@
     <title>Weekend Challenge #1</title>
     <link rel='stylesheet' href='normalize.css' />
     <link rel='stylesheet' href='main.css' />
-    <script src='jquery-3.1.1.min.js'></script>
-    <script src='app.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
+    <script src='script.js'></script>
   </head>
-  <body>
+  <body ng-app='basicApp'>
+    <main ng-controller='basicController as basic'>
+
     <form id='employeeInfo'>
       <div class='input'>
         <label for='employeeFirstName'>First Name</label>
-        <input type='text' id='employeeFirstName' name='employeeFirstName' autofocus="" required=""/>
+        <input type='text' id='employeeFirstName' ng-model='basic.employee.firstName' autofocus required />
 
 
         <label for='employeeLastName'>Last Name</label>
-        <input type='text' id='employeeLastName' name='employeeLastName' required="" />
+        <input type='text' id='employeeLastName' ng-model='basic.employee.lastName' required />
       </div>
       <div class='input'>
         <label for='employeeID'>ID Number</label>
-        <input type='number' id='employeeID' name='employeeID' required  />
+        <input type='number' id='employeeID' ng-model='basic.employee.id' required  />
 
         <label for='employeeTitle'>Job Title</label>
-        <input type='text' id='employeeTitle' name='employeeTitle' required />
+        <input type='text' id='employeeTitle' ng-model='basic.employee.title' required />
       </div>
       <div class='input'>
         <label for ='employeeSalary'>Annual Salary</label>
-        <input type='number' id='employeeSalary' name='employeeSalary' required />
+        <input type='number' id='employeeSalary' ng-model='basic.employee.salary' required />
 
-        <button type='submit'>Submit</button>
+        <button type='submit' ng-click='basic.createEmployee()'>Submit</button>
       </div>
     </form>
     <section class='employeeData'>
       <h1>Employee List</h1>
-      <ul class='employeeDataList'>
-        <li id='first'>First Name
-          <ul id='a'>
-          </ul>
-        </li>
-        <li id='last'>Last Name
-          <ul id='b'>
-          </ul>
-        </li>
-        <li id='id'>ID
-          <ul id='c'>
-          </ul>
-        </li>
-        <li id='title'>Title
-          <ul id='d'>
-          </ul>
-        </li>
-        <li id='salary'>Salary ($)
-          <ul id='e'>
-          </ul>
-        </li>
+      <ul ng-repeat='employee in basic.employees'>
+          <li>
+            {{ employee.firstName }}
+          </li>
+          <li>
+            {{ employee.lastName }}
+          </li>
+          <li>
+            {{ employee.id }}
+          </li>
+          <li>
+            {{ employee.title }}
+          </li>
+          <li>
+            {{ employee.salary | currency }}
+          </li>
+          <li>
+            <button type='button' ng-click='basic.deleteEmployee(employee)'>Delete</button>
+          </li>
       </ul>
     </section>
-    <button class='delete'>Delete Last</button>
     <section>
       <div>
-        <p id='monthlySalary'>Monthly Salary Expenditures ($): </p>
+        <p id='monthlySalary'>Monthly Salary Expenditures ($): {{ basic.getTotal() | currency }}</p>
       </div>
     </section>
+  </main>
   </body>
 </html>

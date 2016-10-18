@@ -41,13 +41,6 @@ ul {
 *                       EMPLOYEE DATA
 *======================================================================*/
 
-.employeeDataList li {
+ul li {
   display: inline-block;
-  padding-right: 2em;
-  text-decoration: underline;
-}
-
-li.employee {
-  display: block;
-  text-decoration: none;
 }
